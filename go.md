@@ -9,6 +9,8 @@ https://www.amazon.com/Programming-Language-Addison-Wesley-Professional-Computin
 https://gobyexample.com
 
 https://tour.golang.org/welcome/1
+
+https://golang.org/doc/effective_go.html
 ```
 
 
