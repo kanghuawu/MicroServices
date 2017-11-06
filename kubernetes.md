@@ -60,4 +60,10 @@ kubectl port-forward <pod name> 8080:8080
 kubectl cp <pod name>:/dir/file.txt ./file.txt
 
 kubectl cp ./file.txt <pod name>:/dir/file.txt
+
+// switching between minikube and gcloud kubernetes
+
+kubectl config get-contexts
+
+kubectl config use-context CONTEXT_NAME
 ```
