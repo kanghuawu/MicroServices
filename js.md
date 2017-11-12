@@ -1,9 +1,9 @@
+# Javascript
+
 ### Resource 
 
-```
-https://codeburst.io/10-javascript-concepts-you-need-to-know-for-interviews-136df65ecce
+* [10-javascript-concepts-you-need-to-know-for-interviews](https://codeburst.io/10-javascript-concepts-you-need-to-know-for-interviews-136df65ecce)
 
-```
 
 ### Redux
 
