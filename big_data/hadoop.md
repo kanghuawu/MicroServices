@@ -9,9 +9,8 @@
 set up pycharm 
 https://stackoverflow.com/questions/34685905/how-to-link-pycharm-with-pyspark
 
-export PYSPARK_PYTHON=python3
-
-PYTHONSTARTUP=code.py pyspark
+# if use virtualenv manual export following command after active virtualenv
+export PYSPARK_PYTHON=`which python3`
 
 https://community.cloudera.com/t5/Cloudera-Manager-Installation/What-is-the-Path-of-hdfs-site-xml-core-xml/m-p/15188
 hdfs://quickstart.cloudera:8020
