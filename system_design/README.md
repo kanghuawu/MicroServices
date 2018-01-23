@@ -2,6 +2,18 @@
 
 ## Cheatsheet
 
+### REST (Representational state transfer)
+
+| Verb | Idempotent | Safe |
+|---|---|---|
+| GET | Yes | Yes |
+| POST | No | No |
+| PUT | Yes | No |
+| PATCH | No | No |
+| DELETE | **Yes** | No |
+
+> Think Idempotent as `f(f(x)) = f(x)` (ex. `abs(abs(x)) = abs(x)`)
+
 ### Numbers Every Programmer Should Know
 ```
 Latency Comparison Numbers
