@@ -2,6 +2,14 @@
 
 ## Cheatsheet
 
+### 80/20 Rule
+[source](https://dzone.com/articles/applying-8020-rule-software)
+
+* 80% of bugs are found in 20% of the code
+* 80% of changes are made in 20% of the code
+* 80% of users only use 20% of features
+* ...
+
 ### REST (Representational state transfer)
 
 | Verb | Idempotent | Safe |
@@ -15,6 +23,19 @@
 > Think Idempotent as `f(f(x)) = f(x)` (ex. `abs(abs(x)) = abs(x)`)
 
 ### Numbers Every Programmer Should Know
+
+Example: 
+* 150ms: access some from another continent (round trip)
+* 3  ms: authentication
+* 0  ms: data serialization
+* 30 ms: 3 disk seek to look up for index
+* 40 ms: 4 disk seek to read data
+* 100ms: 2MB sequential reading of data
+
+Total: 150 + 3 + 30 + 40 + 100 = 323ms
+
+Ordinary budget: 300ms
+
 ```
 Latency Comparison Numbers
 --------------------------
@@ -53,3 +74,5 @@ https://gist.github.com/jboner/2841832
 * [Hired In Tech](https://www.hiredintech.com/classrooms/system-design/lesson/52)
 * [palantir](https://www.palantir.com/2011/10/how-to-rock-a-systems-design-interview/)
 * [gist](https://gist.github.com/vasanthk/485d1c25737e8e72759f)
+### Paper
+* [Paxos Made Simple](http://lamport.azurewebsites.net/pubs/paxos-simple.pdf) 
