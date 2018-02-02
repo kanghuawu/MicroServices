@@ -10,12 +10,15 @@
 > from Kafka The Definitive Guide
 
 ```
+# start zookeeper and kafka
+zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties & kafka-server-start /usr/local/etc/kafka/server.properties
+
 # start zookeeper
 brew services start zookeeper
 
-zkServer start /usr/local/etc/zookeeper/zookeeper.properties
+zkServer start /usr/local/etc/kafka/zookeeper.properties
 
-zookeeper-server-start /usr/local/etc/zookeeper/zookeeper.properties
+zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties
 
 # start kafka
 brew services start 
