@@ -1,10 +1,21 @@
-# Windows Azure Storage –  A Highly Available Cloud Storage Service with Strong Consistency
+# Database
+
+## Data Modeling
+
+### Resource
+
+* [quora](https://www.quora.com/What-are-some-recommended-books-about-data-modeling)
+* [datastax](https://academy.datastax.com/resources/ds220-data-modeling)
+
+## Paper
+
+### Windows Azure Storage –  A Highly Available Cloud Storage Service with Strong Consistency
 
 [sosp2011](https://www.youtube.com/watch?v=QnYdbQO0yj4)
 
 [easy version](https://blogs.msdn.microsoft.com/windowsazurestorage/2010/12/30/windows-azure-storage-architecture-overview/)
 
-# Apache Hadoop Goes Realtime at Facebook
+### Apache Hadoop Goes Realtime at Facebook
 
 [youtube](https://vimeo.com/26804675)
 
