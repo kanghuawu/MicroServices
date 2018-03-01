@@ -10,7 +10,7 @@
 ```
 mysql --user=<user name> --password
 
-enter password: <password>
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass';
 
 SHOW <database name>;
 
