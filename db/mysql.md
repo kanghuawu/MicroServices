@@ -5,7 +5,7 @@
 * [GRANT ALL PRIVILEGES](https://stackoverflow.com/questions/5016505/mysql-grant-all-privileges-on-database)
 
 
-### Command
+### Baisc Command
 
 ```
 mysql --user=<user name> --password
@@ -24,6 +24,19 @@ example:
 
 GRANT ALL PRIVILEGES ON lb_server.* TO 'lb_server'@'localhost' IDENTIFIED BY 'password';
 
+# show all users
 SELECT User FROM mysql.user;
 
+SHOW DATABASES LIKE 'Leetcode';
+
+CREATE DATABASE IF NOT EXISTS Leetcode;
+
+USE Leetcode;
+
+DROP TABLE Employee;
+
+CREATE TABLE IF NOT EXISTS Employee (
+    Id INT,
+    Salary INT
+);
 ```
