@@ -1,4 +1,4 @@
-# Java
+# Config
 
 ## SDKMan
 ```shell
