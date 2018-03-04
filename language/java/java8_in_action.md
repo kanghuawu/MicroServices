@@ -15,3 +15,41 @@
 * Note that Java 8’s default methods are not abstract and do not count: a functional interface may still have multiple default methods. 
 
 > from http://www.baeldung.com/java-8-functional-interfaces
+> oracle doc: https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html
+
+## Predicate
+
+```java
+@FunctionalInterface
+public interface Predicate<T>{
+    boolean test(T t);
+}
+```
+
+## Consumer
+
+```java
+@FunctionalInterface
+public interface Consumer<T>{
+    void accept(T t);
+}
+```
+
+## Function
+
+```java
+@FunctionalInterface
+public interface Function<T, R>{
+    R apply(T t);
+}
+```
+
+## Suppier
+
+```java
+@FunctionalInterface
+public interface Consumer<T>{
+    T get();
+}
+```
+
