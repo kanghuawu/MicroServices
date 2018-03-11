@@ -28,3 +28,5 @@ Locality-Sensitive Hashing (LSH) is an algorithm for solving the approximate or 
  
 * Readings:
   * Easy to read paper: [Locality-Sensitive Hashing for Finding Nearest Neighbors](http://www.slaney.org/malcolm/yahoo/Slaney2008-LSHTutorial.pdf)
+
+* python implementation [example](https://rajmak.wordpress.com/2014/12/22/locality-sensitive-hashing-lsh-map-reduce-in-python/)
