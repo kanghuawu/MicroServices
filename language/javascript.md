@@ -6,6 +6,10 @@
 
 * [Introduction to ES6 Promises – The Four Functions You Need To Avoid Callback Hell](http://jamesknelson.com/grokking-es6-promises-the-four-functions-you-need-to-avoid-callback-hell/)
 
+#### Github
+
+* [You-Dont-Know-JS](https://github.com/getify/You-Dont-Know-JS)
+
 ### Redux
 
 ```
