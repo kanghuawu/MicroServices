@@ -64,6 +64,19 @@ DELETE from users WHERE lastname = 'Doe';
 
 ## Data Model
 
+# Types
+
+
+* int: 32-bit signed integer (Java int)
+* bigint: 64-bit signed long integer (Java long)
+* smallint: 16-bit signed integer (Java short)
+* tinyint: An 8-bit signed integer (Java tinyint)
+* varint: A variable precision signed integer (equivalent to java.math.BigInteger)
+* float: 32-bit IEEE-754 floating point (Java float)
+* double: 64-bit IEEE-754 floating point (Java double)
+* decimal: variable precision decimal (equivalent to java.math.BigDecimal) 
+
+
 ### Keyspaces
 
 ### Column Families (Tables)
