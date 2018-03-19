@@ -60,7 +60,7 @@ SELECT COUNT(*) FROM videos_by_tag_year WHERE tag = 'trailer';
 SELECT COUNT(*) FROM videos_by_tag_year;
 ```
 
-Exercise 5
+## Exercise 5
 
 ```sql
 TRUNCATE videos;
@@ -76,4 +76,23 @@ ALTER TABLE videos ADD encoding frozen <video_encoding>;
 COPY videos (video_id, encoding) FROM 'videos_encoding.csv' WITH HEADER=true;
 
 SELECT title, encoding, tags FROM videos LIMIT 10;
+```
+
+## Exercise 6
+
+```sql
+CREATE TABLE videos_count_by_tag (
+  tag text, 
+  added_year int, 
+  video_count counter, 
+PRIMARY KEY((tag, added_year)));
+
+SOURCE 'videos_count_by_tag.cql';
+
+SELECT * FROM videos_count_by_tag LIMIT 10 ;
+
+# update data in first row
+UPDATE videos_count_by_tag SET video_count = video_count + 2 WHERE tag = 'dse' AND added_year = 2015;
+
+SELECT * FROM videos_count_by_tag LIMIT 10 ;
 ```
