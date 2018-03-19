@@ -23,6 +23,8 @@ cassandra -f
 
 ## CQL
 
+DataStax cql [doc](https://docs.datastax.com/en/cql/latest/cql/cql_reference/cqlReferenceTOC.html)
+
 ```shell
 DESCRIBE keyspaces;
 
