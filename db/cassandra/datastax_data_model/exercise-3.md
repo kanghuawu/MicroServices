@@ -1,3 +1,4 @@
+```sql
 USE killrvideo;
 CREATE TABLE videos_by_title_year (
   title text, 
@@ -10,3 +11,4 @@ PRIMARY KEY((title, added_year)));
 COPY videos_by_title_year FROM 'videos_by_title_year.csv' WITH HEADER=true;
 SELECT title, added_year FROM videos_by_title_year WHERE title = 'Sleepy Grumpy Cat' AND added_year = 2015;
 SELECT title, added_year FROM videos_by_title_year WHERE added_year = 2015; # throw error
+```
