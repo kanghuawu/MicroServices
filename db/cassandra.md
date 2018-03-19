@@ -101,17 +101,20 @@ CREATE TYPE address (
    zip_code int);
 ```
 
-### Keyspaces
+### Model
+#### Clusters
+#### Keyspaces
+#### Tables
+Each column family is stored on disk in its own separate file. So to optimize performance, it’s important to keep columns that you are likely to query together in the same column family, and a super column can be helpful for this.
+#### Columns
+#### Super Columns
+The basic structure of a super column is its name, which is a byte array (just as with a regular column), and the columns it stores. Its columns are held as a map whose keys are the column names and whose values are the columns.
 
-### Column Families (Tables)
-Each column family is stored on disk in its own separate file. So to optimize perform- ance, it’s important to keep columns that you are likely to query together in the same column family, and a super column can be helpful for this.
-### Columns
-### Super Columns
-* The basic structure of a super column is its name, which is a byte array (just as with a regular column), and the columns it stores. Its columns are held as a map whose keys are the column names and whose values are the columns.
+The SuperColumn class implements both the IColumn and the IColumnContainer classes.
 
-* The SuperColumn class implements both the IColumn and the IColumnContainer classes.
+#### Composite Keys/compound key/partitions
+Cassandra uses a special primary key called a composite key (or compound key) to represent wide rows, also called partitions. The composite key consists of a partition key, plus an  optional set of clustering columns.
 
-### Composite Keys
 There is an important consideration when modeling with super columns: Cassandra does not index subcolumns, so when you load a super column into memory, all of its columns are loaded as well. You can use a composite key of your own design to help you with queries.
 
 ### Design Patterns
@@ -122,7 +125,19 @@ It is common to create a **secondary index** that represents additional queries.
 ##### Secondary Index
 A secondary index is helpful for quickly looking up data when searching by one or more non-key columns [here](https://cloud.google.com/spanner/docs/secondary-indexes).
 
-###### Don'ts
+SSTable Attached Secondary Index (SASI): A New Secondary Index Implementation
+```shell
+CREATE CUSTOM INDEX user_last_name_sasi_idx ON user (last_name) 
+  USING 'org.apache.cassandra.index.sasi.SASIIndex';
+
+# Like
+SELECT * FROM user WHERE last_name LIKE 'N%';
+
+# Inequality
+SELECT * FROM user WHERE age > 10;
+```
+
+##### Secondary Index Don'ts
 * Columns with high cardinality. For example, indexing on the user.addresses column could be very expensive, as the vast majority of addresses are unique.
 * Columns with very low data cardinality. For example, it would make little sense to index on the user.title column in order to support a query for every “Mrs.” in the user table, as this would result in a massive row in the index.
 * Columns that are frequently updated or deleted. Indexes built on these columns can generate errors if the amount of deleted data (tombstones) builds up more quickly than the compaction process can handle.
@@ -132,6 +147,14 @@ A key can itself hold a value. In other words, you can have a valueless column.
 
 #### Aggregate Key
 When you use the Valueless Column pattern, you may also need to employ the Aggregate Key pattern.
+
+### Design Differences Between RDBMS and Cassandra
+* No joins
+* No referential integrity
+* Denormalization
+* Query-first design
+* Designing for optimal storage
+* Sorting is a design decision
 
 # Reference and Resources
 
