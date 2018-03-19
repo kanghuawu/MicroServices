@@ -24,18 +24,18 @@ cassandra -f
 ## CQL
 
 ```shell
-desc keyspaces;
+DESCRIBE keyspaces;
 
 CREATE KEYSPACE mydb WITH replication={
   'class': 'SimpleStrategy', 
   'replication_factor': '1'
 };
 
-desc table users;
+DESCRIBE TABLE users;
 
-desc mydb;
+DESCRIBE mydb;
 
-use mydb;
+USE mydb;
 
 CREATE TABLE users ( 
   firstname text,
@@ -45,7 +45,7 @@ CREATE TABLE users (
   city text,
   PRIMARY KEY (lastname));
 
-desc table users;
+DESCRIBE TABLE users;
 
 INSERT INTO users (firstname, lastname, age, email, city) 
 VALUES ('John', 'Smith', 46, 'johnsmith@email.com', 'Sacramento');
@@ -60,6 +60,10 @@ SELECT * FROM users WHERE lastname= 'Doe';
 UPDATE users SET city= 'San Jose' WHERE lastname= 'Doe';
 
 DELETE from users WHERE lastname = 'Doe';
+
+DROP TABLE users;
+
+DROP KEYSPACE mydb;
 ```
 
 ## Data Model
