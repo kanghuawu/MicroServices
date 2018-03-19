@@ -100,7 +100,7 @@ SELECT * FROM videos_count_by_tag LIMIT 10 ;
 ## Exercise 7
 
 ```sql
-# Q1
+# Q1: Retrieve videos an actor has appeared in (newest first).
 CREATE TABLE videos_by_actor (
   actor text,
   added_date timestamp,
@@ -120,7 +120,7 @@ SELECT added_date, title FROM videos_by_actor WHERE actor = 'Tom Hanks';
 
 SELECT added_date, title FROM videos_by_actor WHERE actor = 'Denzel Washington';
 
-# Q2
+# Q2: Retrieve videos within a particular genre (newest fist).
 CREATE TABLE videos_by_genre (
   genre text,
   added_date timestamp,
