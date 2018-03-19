@@ -64,9 +64,9 @@ DELETE from users WHERE lastname = 'Doe';
 
 ## Data Model
 
-# Types
+### Types
 
-
+#### Numeric Data Type
 * int: 32-bit signed integer (Java int)
 * bigint: 64-bit signed long integer (Java long)
 * smallint: 16-bit signed integer (Java short)
@@ -75,7 +75,31 @@ DELETE from users WHERE lastname = 'Doe';
 * float: 32-bit IEEE-754 floating point (Java float)
 * double: 64-bit IEEE-754 floating point (Java double)
 * decimal: variable precision decimal (equivalent to java.math.BigDecimal) 
-
+#### Textual Data Types
+* text, varchar: Synonyms for a UTF-8 character string
+* ascii: An ASCII character string 
+#### Time and Identity Data Types
+* timestamp: 2015-06-15 20:05:07.013-0700
+* date, time
+* uuid: Type 4 UUID. For exampe, 1a6300ca-0572-4736-a393-c0b7229e193e.
+* timeuuid: Type 1 UUID. 
+#### Other Simple Data Types
+* boolean
+* blob:
+* inet
+* counter
+#### Collections
+* set
+* list
+* map
+#### User-Defined Types (UDTs)
+```shell
+CREATE TYPE address (
+   street text,
+   city text,
+   state text,
+   zip_code int);
+```
 
 ### Keyspaces
 
@@ -95,7 +119,13 @@ There is an important consideration when modeling with super columns: Cassandra 
 #### Materialized View
 It is common to create a **secondary index** that represents additional queries. Because you don’t have a SQL WHERE clause, you can recreate this effect by writing your data to a second column family that is created specifically to represent that query.
 
-> Secondary Index: A secondary index is helpful for quickly looking up data when searching by one or more non-key columns [here](https://cloud.google.com/spanner/docs/secondary-indexes).
+##### Secondary Index
+A secondary index is helpful for quickly looking up data when searching by one or more non-key columns [here](https://cloud.google.com/spanner/docs/secondary-indexes).
+
+###### Don'ts
+* Columns with high cardinality. For example, indexing on the user.addresses column could be very expensive, as the vast majority of addresses are unique.
+* Columns with very low data cardinality. For example, it would make little sense to index on the user.title column in order to support a query for every “Mrs.” in the user table, as this would result in a massive row in the index.
+* Columns that are frequently updated or deleted. Indexes built on these columns can generate errors if the amount of deleted data (tombstones) builds up more quickly than the compaction process can handle.
 
 #### Valueless Column
 A key can itself hold a value. In other words, you can have a valueless column.
