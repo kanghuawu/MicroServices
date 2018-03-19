@@ -96,3 +96,44 @@ UPDATE videos_count_by_tag SET video_count = video_count + 2 WHERE tag = 'dse' A
 
 SELECT * FROM videos_count_by_tag LIMIT 10 ;
 ```
+
+## Exercise 7
+
+```sql
+# Q1
+CREATE TABLE videos_by_actor (
+  actor text,
+  added_date timestamp,
+  video_id timeuuid,
+  character_name text,
+  description text,
+  encoding frozen<video_encoding>,
+  tags set<text>,
+  title text,
+  user_id uuid,
+  PRIMARY KEY ((actor), added_date, video_id, character_name)
+) WITH CLUSTERING ORDER BY (added_date DESC);
+
+COPY videos_by_actor FROM 'exercise-7/videos_by_actor.csv' WITH HEADER = true;
+
+SELECT added_date, title FROM videos_by_actor WHERE actor = 'Tom Hanks';
+
+SELECT added_date, title FROM videos_by_actor WHERE actor = 'Denzel Washington';
+
+# Q2
+CREATE TABLE videos_by_genre (
+  genre text,
+  added_date timestamp,
+  video_id timeuuid,
+  description text,
+  encoding frozen<video_encoding>,
+  tags set<text>,
+  title text,
+  user_id uuid,
+  PRIMARY KEY ((genre), added_date, video_id)
+) WITH CLUSTERING ORDER BY (added_date DESC);
+
+COPY videos_by_genre FROM 'videos_by_genre.csv' WITH HEADER = true;
+
+SELECT genre, title, added_date FROM videos_by_genre WHERE genre = 'Future noir';
+```
