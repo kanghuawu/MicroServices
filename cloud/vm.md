@@ -14,6 +14,7 @@ $ /etc/hosts
 * How to Create a Network of Machines in VirtualBox with SSH Access [youtube](https://www.youtube.com/watch?v=S7jD6nnYJy0)
 * virtualbox network [manual](https://www.virtualbox.org/manual/ch06.html)
 * https://blogs.oracle.com/scoter/networking-in-virtualbox-v2
+* http://bertvv.github.io/notes-to-self/2015/09/29/virtualbox-networking-an-overview/
 
 ### Network Address Translation (NAT)
 ![Network Address Translation (NAT)](https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/f2e3e7b6-c53b-4457-85e9-49625315791a/Image/90093dc07a2e9cb7d93bf7a3fa8f8c19/nat.png)
