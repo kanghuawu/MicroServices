@@ -1,6 +1,14 @@
 
 # Virtualbox
 
+## Setting
+
+```shell
+# modify host name
+$ /etc/hostname
+$ /etc/hosts
+```
+
 ## Network
 
 * How to Create a Network of Machines in VirtualBox with SSH Access [youtube](https://www.youtube.com/watch?v=S7jD6nnYJy0)
