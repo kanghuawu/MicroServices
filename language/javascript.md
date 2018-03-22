@@ -3,6 +3,7 @@
 ### Resource 
 
 * [data visualization](http://bigdata-madesimple.com/review-of-20-best-big-data-visualization-tools/)
+* [rechart](https://github.com/recharts/recharts)
 * [10-javascript-concepts-you-need-to-know-for-interviews](https://codeburst.io/10-javascript-concepts-you-need-to-know-for-interviews-136df65ecce)
 * [Introduction to ES6 Promises – The Four Functions You Need To Avoid Callback Hell](http://jamesknelson.com/grokking-es6-promises-the-four-functions-you-need-to-avoid-callback-hell/)
 
