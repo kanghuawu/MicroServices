@@ -19,3 +19,5 @@ https://www.youtube.com/watch?t=3215&v=HG2Yd-3r4-M
 
 * https://www.youtube.com/watch?v=WyfHUNnMutg
 * https://www.youtube.com/watch?v=I7cULsDbSaU
+* https://github.com/vaquarkhan/vk-wiki-notes/wiki
+* https://community.hortonworks.com/questions/51391/dataframessets-simple-join-is-skewed-due-to-join-c.html
