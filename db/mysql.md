@@ -1,5 +1,11 @@
 # MySQL
 
+## MySQL Study
+
+* [lookup table instead of enum](https://stackoverflow.com/questions/761211/how-to-handle-enumerations-without-enum-fields-in-a-database/761343#761343)
+
+
+
 ### Resources
 
 * [GRANT ALL PRIVILEGES](https://stackoverflow.com/questions/5016505/mysql-grant-all-privileges-on-database)
