@@ -1,5 +1,10 @@
 # Hadoop
 
+## Setup
+
+* https://blog.insightdatascience.com/spinning-up-a-free-hadoop-cluster-step-by-step-c406d56bae42
+* http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/SingleCluster.html
+
 ### Resources
 
 * [tomwhite](https://github.com/tomwhite/hadoop-book)
