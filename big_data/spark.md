@@ -1,5 +1,9 @@
 # Spark
 
+## Setup
+
+* https://blog.insightdatascience.com/spinning-up-a-spark-cluster-on-spot-instances-step-by-step-e8ed14ebb3b
+
 ## Advanced Tunning
 
 https://www.youtube.com/watch?t=3215&v=HG2Yd-3r4-M
