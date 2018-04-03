@@ -2,9 +2,9 @@
 
 ## MySQL Study
 
-* [lookup table instead of enum](https://stackoverflow.com/questions/761211/how-to-handle-enumerations-without-enum-fields-in-a-database/761343#761343)
+* lookup table instead of enum [here](https://stackoverflow.com/questions/761211/how-to-handle-enumerations-without-enum-fields-in-a-database/761343#761343)
 
-
+* B Tree vs B+Tree [here](https://stackoverflow.com/questions/870218/differences-between-b-trees-and-b-trees)
 
 ### Resources
 
