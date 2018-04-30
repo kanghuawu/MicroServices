@@ -13,9 +13,10 @@
 
 ```
 # start zookeeper
-brew services start zookeeper
 
 zkServer start /usr/local/etc/kafka/zookeeper.properties
+
+zkServer stop /usr/local/etc/kafka/zookeeper.properties
 
 zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties
 
@@ -35,4 +36,13 @@ Using the ConsoleConsumer with old consumer is deprecated and will be removed in
 
 # list all topics
 kafka-topics --list --zookeeper localhost:2181
+
+# delete topic
+kafka-topics --delete --topic meetup --zookeeper localhost:2181
+
+# find largest
+kafka-run-class kafka.tools.GetOffsetShell --broker-list localhost:9092 --time -1 --topic meetup
+
+# find smallest
+kafka-run-class kafka.tools.GetOffsetShell --broker-list localhost:9092 --time -2 --topic meetup
 ```
