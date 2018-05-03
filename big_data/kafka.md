@@ -29,7 +29,7 @@ kafka-server-start /usr/local/etc/kafka/server.properties
 kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic twitterstream
 
 # print out topic
-kafka-console-consumer --bootstrap-server localhost:2181 --topic s --from-beginning
+kafka-console-consumer --bootstrap-server localhost:9092 --topic s --from-beginning
 
 kafka-console-consumer --zookeeper localhost:2181 --topic twitterstream --from-beginning
 Using the ConsoleConsumer with old consumer is deprecated and will be removed in a future major release. Consider using the new consumer by passing [bootstrap-server] instead of [zookeeper].
