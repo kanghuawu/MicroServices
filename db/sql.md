@@ -72,3 +72,15 @@ on table_name (conditional_expression);
 
 DROP INDEX index_name;
 ```
+
+## Isolation
+
+**Dirty Reads** occur when one transaction reads data written by another, uncommitted, transaction. The danger with dirty reads is that the other transaction might never commit, leaving the original transaction with "dirty" data.
+
+**Non Repeatable Reads** occur when one transaction attempts to access the same data twice and a second transaction modifies the data between the first transaction's read attempts. This may cause the first transaction to read two different values for the same data, causing the original read to be non-repeatable
+
+**Phantom Read** occurs when two same queries are executed, but the rows retrieved by the two, are different. For example, suppose transaction T1 retrieves a set of rows that satisfy some search criteria. Now, Transaction T2 generates some new rows that matches the search criteria for transaction T1. If transaction T1 reexecutes the statement that reads the rows, it gets a different set of rows this time.
+
+
+> [wiki](https://en.wikipedia.org/wiki/Isolation_(database_systems)#Isolation_levels)
+> [geeksforgeeks](https://www.geeksforgeeks.org/transaction-isolation-levels-dbms/)
