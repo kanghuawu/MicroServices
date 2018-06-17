@@ -83,4 +83,5 @@ DROP INDEX index_name;
 
 
 > [wiki](https://en.wikipedia.org/wiki/Isolation_(database_systems)#Isolation_levels)
+
 > [geeksforgeeks](https://www.geeksforgeeks.org/transaction-isolation-levels-dbms/)
