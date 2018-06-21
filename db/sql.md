@@ -85,3 +85,5 @@ DROP INDEX index_name;
 > [wiki](https://en.wikipedia.org/wiki/Isolation_(database_systems)#Isolation_levels)
 
 > [geeksforgeeks](https://www.geeksforgeeks.org/transaction-isolation-levels-dbms/)
+
+> [stackoverflow](https://stackoverflow.com/questions/4034976/difference-between-read-commit-and-repeatable-read)
